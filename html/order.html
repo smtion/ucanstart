@@ -74,6 +74,9 @@
 									<span ng-switch-when="true"><spinner size="xs" is-loading="vm.isLoading"></spinner></span>
 									<span ng-switch-when="false"><strong>{{ vm.balance | number }}</strong>원입니다.</span>
 								</span></p>
+							<p>
+								* 고객님은 {{ vm.regDate }}에 NH 핀어카운트를 발급받으셨습니다.
+							</p>
 							<button class="balance" ng-click="vm.getBalance();">잔액 확인하기</button>
 						</div>
 						<p class="ft-14">
@@ -85,7 +88,12 @@
 						</p>
 						<!----qnalist_contents end---->
 						<div style="margin-left:-3px;">
-							<button type="button" ng-class="{payment_btn: vm.agreement, payment_btn_off: !vm.agreement}" ng-click="vm.pay()" ng-disabled="!vm.agreement">결제 진행하기</button>
+							<button type="button" ng-class="{payment_btn: vm.agreement && !vm.isSubmitted, payment_btn_off: !vm.agreement || vm.isSubmitted}" ng-click="vm.pay()" ng-disabled="!vm.agreement || vm.isSubmitted">
+								<span ng-switch="vm.isSubmitted">
+									<span ng-switch-when="true">결제 진행중입니다.</span>
+									<span ng-switch-when="false">결제 진행하기</span>
+								</span>
+							</button>
 							<!--동의 체크후 payment_btn_on클래스로 버튼 활성화-->
 						</div>
 					</div>

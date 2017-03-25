@@ -48,11 +48,9 @@
       var api = {
         Header: {
           ApiNm: "InquireTransactionHistory",
-          ApiSvcCd: "04Q_004_F0"
+          ApiSvcCd: "03Q_005_F0"
         },
         FinAcno: FinAcno,
-        Tlno: Tlno,
-        BrdtBrno: BrdtBrno,
         Insymd: '20170201',
         Ineymd: '20170325',
         TrnsDsnc: 'A',
@@ -90,7 +88,7 @@
         },
         FinAcno: FinAcno,
         Tram: Tram,
-        DractOtlt: "농작교"
+        DractOtlt: "농작교결제완료"
       };
 
       return $q(function (resolve, reject) {
@@ -100,13 +98,15 @@
       });
     }
 
-    function deposit() {
+    function deposit(Tram) {
       var api = {
         Header: {
-          ApiNm: "InquireBalance",
-          ApiSvcCd: "04Q_003_F0"
+          ApiNm: "ReceivedTransferFinAccount",
+          ApiSvcCd: "01M_003_F0"
         },
-        FinAcno: FinAcno
+        FinAcno: FinAcno,
+        Tram: Tram,
+        MractOtlt: "농작교결제취소"
       };
 
       return $q(function (resolve, reject) {

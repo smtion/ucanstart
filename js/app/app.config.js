@@ -65,6 +65,12 @@
         controller: 'orderController',
         controllerAs: 'vm'
       })
+      .state('order_done', {
+        url: '/order_done/:a',
+        templateUrl: 'html/order_done.html',
+        controller: 'orderDoneController',
+        controllerAs: 'vm'
+      })
       ;
   }
 })();

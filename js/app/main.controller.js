@@ -17,6 +17,7 @@
 
     function activate() {
       init();
+      get();
     }
 
     function init() {
@@ -34,7 +35,7 @@
     }
 
     function get() {
-      nhApi.balance().then(
+      nhApi.status().then(
         function (res) {
           vm.data = res;
           // RlpmAbamt

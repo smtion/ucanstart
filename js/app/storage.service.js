@@ -22,12 +22,13 @@
       try {
         value = JSON.parse(value);
       } catch (e) {
-        
+
       }
       return value;
     }
 
     function set(key, value) {
+      // remove(key);
       if (typeof value == 'object') value = JSON.stringify(value);
       window.localStorage.setItem(key, value);
     }
