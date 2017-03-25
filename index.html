@@ -43,8 +43,8 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body ng-cloak ng-controller="index">{{ $scope.menu  }}
-	<div class="header" ng-hide="$scope.menu == 'admin'">
+<body ng-cloak>
+	<div class="header">
   	<div class="w_header">
       <h1><a href="/"><img src="images/logo_w.png" style="width:190px;margin-top:-6px;"></a></h1>
       <ul class="nav_left top_menu">
@@ -143,13 +143,6 @@ for (i = 0; i < acc.length; i++) {
 		this.nextElementSibling.classList.toggle("show");
   }
 }
-</script>
-<script>
-	angular.module('app').controller('index', function ($scope, $state) {
-		setTimeout(function() {
-			$scope.menu = $state.current.name;
-			console.log($state.current.name);
-		}, 100);
-	});
+
 </script>
 </html>
