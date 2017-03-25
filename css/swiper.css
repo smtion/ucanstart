@@ -1,0 +1,18 @@
+.swiper-container {
+    width: 100%;
+    margin:10px auto;
+}
+.swiper-slide {
+    text-align: center;
+    /*width: 85%;*/
+	width: 100%;
+}
+.swiper-pagination-bullet{
+    background: #e6e6e6;
+    opacity: 1;
+    width:12px;
+    height:12px;
+}
+.swiper-pagination-bullet-active{
+    background: #d92742;
+}

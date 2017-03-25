@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>결제페이지</title>
+<link rel="stylesheet" type="text/css" href="../css/olley_161202.css" />
+<link rel="stylesheet" type="text/css" href="../css/olley_subpages.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/olley_btns.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--토글스크립트,중복시 제거-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi" />
+
+</head>
+
+
+
+<body>
+    <div class="header">
+    <div class="w_header">
+        <h1><img src="../images/logo.png"/ style="width:100px;margin-top:-6px;"></h1>
+        <ul class="nav_left top_menu">
+            <li>
+                <a href="#">프로젝트 둘러보기</a>
+<!--
+                	<ul class="submenu">
+                    	<li><a href="#"><span>대출하기</span></a></li>
+                        <li><a href="#"><span>대출안내</span></a></li>
+                    </ul>
+-->
+            </li>
+            <li>
+                <a href="#">프로젝트 시작하기</a>
+<!--
+                	<ul class="submenu">
+                    	<li><a href="#"><span>투자하기</span></a></li>
+                        <li><a href="#"><span>투자안내</span></a></li>
+                    </ul>
+-->
+            </li>
+        </ul>
+        <ul class="nav_right top_menu">
+<!--
+            	<li>
+                	<a href="#">회사소개</a>
+                	<ul class="submenu">
+                    	<li><a href="#"><span>올리펀딩소개</span></a></li>
+                        <li><a href="#"><span>공지사항</span></a></li>
+                        <li><a href="#"><span>언론보도</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#">고객지원</a>
+                	<ul class="submenu">
+                    	<li><a href="#"><span>FAQ</span></a></li>
+                        <li><a href="#"><span>1:1 문의하기</span></a></li>
+                    </ul>
+                </li>
+-->
+                <li>
+                	<a href="#">로그아웃</a>
+                </li>
+                <li>
+                	<a href="#">
+                     <p class="profile_thum"></p>
+                    </a>
+                </li>
+            </ul>
+    </div><!--web header end-->
+</div>
+    
+ <div class="invest_banner info ">
+        <div class="contents_wrap">
+            <div class="t-c">
+                <h1 class="fw-b fs-35">농작교님의 <span class="fc-skyblue">1</span>번째 UP!</h1>
+                <h4 class="mt5">다함께 배추 농사</h4>
+            </div>
+        </div>
+</div>
+<div class="wrap sub_wrap">
+	<div class="sub_full">
+        <div class="sub_contents_bg">
+            <p class="title_order">배송정보<span class="fs-12 fc-orange">※ 배송 및 결제관련 중요정보가 등록된 연락처로 발송됩니다. 정확한 정보를 입력해주세요.</span></p>
+            <div class="qnalist_contents">
+                <div class="reward_box info">
+                    <table>
+                        <colgroup>
+                            <col style="width:120px;">
+                            <col style="width:500px;">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>*이름</th>
+                            <td><input type="text" name="consumerName" readonly="readonly" value="홍길동" class="full essential"></td>
+                        </tr>
+                        <tr>
+                            <th>*연락처</th>
+                            <td><input type="text" name="consumerPhone"  readonly="readonly" value="010-1234-5678" class="full essential"></td>
+                        </tr>
+                        <tr>
+                            <th>*주소</th>
+                            <td>
+                                <p>
+                                    <input type="text" name="consumerZipcode" readonly="readonly" value="001110" class="essential">
+                                    <a href="" class="btn_type4" onclick="sample7_execDaumPostcode(event)">우편번호 찾기</a>
+                                </p>
+                                <p>
+                                    <input type="text" name="consumerAddr1" readonly="readonly" value="서울특별시 " class="full essential">
+                                    <input type="text" name="consumerAddr2" readonly="readonly" value="9층" class="full essential">
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>*이메일</th>
+                            <td><input type="text" name="consumerEmail" readonly="readonly" value="uncanstart@ucanstart.com" class="full essential"></td>
+                        </tr>
+                        <tr>
+                            <th>*환불계좌</th>
+                            <td>
+                                <p>
+                                    <select class="off essential" name="refundBank">
+                                                <option value="농협은행">농협은행</option>
+                                                <option value="기업은행">기업은행</option>
+                                                <option value="국민은행">국민은행</option>
+                                                <option value="외환은행">외환은행</option>
+                                                <option value="수협중앙회">수협중앙회</option>
+                                                <option value="수출입은행">수출입은행</option>
+                                                <option value="산업은행">산업은행</option>
+                                                <option value="지역농∙축협">지역농∙축협</option>
+                                                <option value="우리은행">우리은행</option>
+                                                <option value="SC은행">SC은행</option>
+                                                <option value="한국시티은행">한국시티은행</option>
+                                                <option value="대구은행">대구은행</option>
+                                                <option value="부산은행">부산은행</option>
+                                                <option value="광주은행">광주은행</option>
+                                                <option value="제주은행">제주은행</option>
+                                                <option value="전북은행">전북은행</option>
+                                                <option value="경남은행">경남은행</option>
+                                                <option value="새마을금고중앙회">새마을금고중앙회</option>
+                                                <option value="신협중앙회">신협중앙회</option>
+                                                <option value="상호저축은행">상호저축은행</option>
+                                                <option value="모건스탠리은행">모건스탠리은행</option>
+                                                <option value="HSBC은행">HSBC은행</option>
+                                                <option value="도이치은행">도이치은행</option>
+                                                <option value="알비에스피엘씨은행">알비에스피엘씨은행</option>
+                                                <option value="제이피모간체이스은행">제이피모간체이스은행</option>
+                                                <option value="미즈호은행">미즈호은행</option>
+                                                <option value="미쓰비시도쿄UFJ은행">미쓰비시도쿄UFJ은행</option>
+                                                <option value="BOA은행">BOA은행</option>
+                                                <option value="비엔피파리바은행">비엔피파리바은행</option>
+                                                <option value="중국공상은행">중국공상은행</option>
+                                                <option value="중국은행">중국은행</option>
+                                                <option value="산림조합중앙회">산림조합중앙회</option>
+                                                <option value="대화은행">대화은행</option>
+                                                <option value="우체국">우체국</option>
+                                                <option value="신용보증기금">신용보증기금</option>
+                                                <option value="기술보증기금">기술보증기금</option>
+                                                <option value="하나은행">하나은행</option>
+                                                <option value="신한은행">신한은행</option>
+                                                <option value="한국주택금융공사">한국주택금융공사</option>
+                                                <option value="서울보증보험">서울보증보험</option>
+                                                <option value="경찰청">경찰청</option>
+                                                <option value="한국전자금융㈜">한국전자금융㈜</option>
+                                                <option value="금융결제원">금융결제원</option>
+                                                <option value="윤안타증권">윤안타증권</option>
+                                                <option value="현대증권">현대증권</option>
+                                                <option value="미래에셋증권">미래에셋증권</option>
+                                                <option value="대우증권">대우증권</option>
+                                                <option value="삼성증권">삼성증권</option>
+                                                <option value="한국투자증권">한국투자증권</option>
+                                                <option value="우리투자증권">우리투자증권</option>
+                                                <option value="교보증권">교보증권</option>
+                                                <option value="하이투자증권">하이투자증권</option>
+                                                <option value="HMC투자증권">HMC투자증권</option>
+                                                <option value="키움증권">키움증권</option>
+                                                <option value="이베스트투자증권">이베스트투자증권</option>
+                                                <option value="SK증권">SK증권</option>
+                                                <option value="대신증권">대신증권</option>
+                                                <option value="아이엠투자증권">아이엠투자증권</option>
+                                                <option value="한화투자증권">한화투자증권</option>
+                                                <option value="하나대투증권">하나대투증권</option>
+                                                <option value="신한금융투자">신한금융투자</option>
+                                                <option value="동부증권">동부증권</option>
+                                                <option value="유진투자증권">유진투자증권</option>
+                                                <option value="메리츠종합금융증권">메리츠종합금융증권</option>
+                                                <option value="부국증권">부국증권</option>
+                                                <option value="신영증권">신영증권</option>
+                                                <option value="LIG투자증권">LIG투자증권</option>
+                                                <option value="임시은행">임시은행</option>
+                                    </select>
+                                    <input type="text" name="refundDepositor" placeholder="예금주" value="홍길동" readonly="readonly" class="essential">
+                                    <input type="text" name="refundAccount" placeholder="계좌번호" value="011-11-111111" readonly="readonly" class="essential">
+                                </p>
+                                <p class="fs-12 fc-lightgrey none" style="color:#666;">무통장 입금 및 실시간 계좌이체의 경우,<br/>목표금액 미 달성 시 프로젝트 종료 후, 7영업일 이내에 환불 처리됩니다.</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!----qnalist_contents end---->
+        </div><!--sub_contents_bg end-->
+        <div class="sub_contents_bg">
+            <p class="title_order">결제방식 선택</p>
+            <div class="qnalist_contents">
+                <div class="paymentBtn_area">
+                    <button class="pay_btn">신용/체크카드</button>
+                    <button class="pay_btn">무통장입금</button>
+                    <button class="pay_btn">가상 계좌이체</button>
+                </div>
+                    <div class="reward_box info">
+                        <table>
+                            <colgroup>
+                                <col style="width:120px;">
+                                <col style="width:500px;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th>입금자명</th>
+                                <td><input type="text" name="consumerName" readonly="readonly" value="홍길동" class="full essential"></td>
+                            </tr>
+                            <tr>
+                                <th>입금은행</th>
+                                <td>
+                                    <p>
+                                        <select class="off essential" name="refundBank">
+                                                    <option value="농협은행">농협은행</option>
+                                        </select>
+                                        <input type="text" name="refundDepositor" placeholder="예금주" value="농작교" readonly="readonly" class="essential">
+                                        <input type="text" name="refundAccount" placeholder="계좌번호" value="011-11-111111" readonly="readonly" class="essential">
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="paymentBtn_area" style="margin-top:30px;border-bottom:none;">
+                    <p class="fs-16"><strong class="fc-green">무통장입금</strong>최종결제 금액</p>
+                    <p class="sum">
+                        <span>20,000</span>원
+                    </p>
+                    <span><label type="checkbox" title="상품정보 이용안내 동의" class="chk_box_gray">&nbsp;</label>리워드1</span>
+                        <span>결제정보를 확인하였으며, 구매진행에 동의합니다.</span>
+                </div>
+            </div>
+            </div><!----qnalist_contents end---->
+        <div style="margin-left:-3px;">
+            <button type="button" class="payment_btn">결제 진행하기</button>
+        </div>
+    </div><!--sub_full end-->
+</div><!--wrap-end-->
+<div class="footer_full">
+    <div class="footer">
+    	<div class="bottom_social_sub">
+            <div class="bottom_logo_gray">
+            <img src="../images/common/logo_gray.png"/>
+            </div>
+            <ul>
+                <li><a href="#"><span class="social01"></span></a></li>
+            	<li><a href="#"><span class="social02"></span></a></li>
+            	<li><a href="#"><span class="social03"></span></a></li>
+            </ul>
+        </div>
+        <div class="bottom_site_info loan_sub_site_info">
+        	<ul>
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#">개인정보 취급방침</a></li>
+                <li><a href="#">공시자료</a></li>
+            </ul>
+        </div>
+        <div class="bottom_comany_info">
+            <span class="footer_line footer_line_loan">
+            &nbsp;
+            </span>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-6 company_info01">
+                        <ul>
+                            <li>(주)농작교</li>
+                            <li>대표 김태웅</li>
+                            <li>사업자등록번호 123-12-12345</li>
+                            <li>통신판매업 제2017-서울서대문-0000호</li>
+                            <li>고객센터 02-1234-5678</li>
+                            <li>이메일 contact@nongjakkyo.kr</li>
+                            <li>서울시 영등포구 국제금융로 10, Three IFC 18층</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!--bottom_comany_info end-->
+        <div class="bottom_copy">
+            <div class="row">
+                <div class="bottom_copy01">
+                COPYRIGHT Ⓒ 2016 OLLEY FUNDING Inc. All Rights Reserved.
+                </div>
+            </div>
+        </div><!--bottom_copy end-->
+    </div><!--footer end-->
+</div>
+<script>
+$(document).ready(function(){
+    $(".chk_box_gray").click(function(){
+        $(".chk_box_gray").toggleClass("chk_box_gray_click");
+    });
+});
+</script>
+<script><!--Accordion-->
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+<!--
+<script>
+$(document).ready(function(){
+    $(".chk_box_gray").click(function(){
+        $(this).toggleClass("chk_box_gray_click");
+    });
+});
+</script>
+-->
+</body>
+</html>
