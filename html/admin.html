@@ -4,6 +4,7 @@
 	</div>
 	<div id="admin_menu">
 		<ul>
+			<li><a href="/" onclick="$('.header').show();">홈으로</a></li>
 			<li>회원관리(계좌)</li>
 			<li>프로젝트 신청</li>
 			<li class="on">프로젝트 관리</li>
@@ -12,11 +13,11 @@
 			<li>통계</li>
 			<li>관리자 메뉴</li>
 		</ul>
-		<div class="logo_Area">
+		<!-- <div class="logo_Area">
 			<img src="../images/logo_admin.png" />
-		</div>
+		</div> -->
 	</div>
-	<div id="admin_subMenu">
+	<!-- <div id="admin_subMenu">
 		<ul>
 			<li>전체</li>
 			<li class="on">모집중</li>
@@ -24,7 +25,7 @@
 			<li>배달완료</li>
 			<li>계약리스트</li>
 		</ul>
-	</div>
+	</div> -->
 	<div id="admin_content">
 		<table>
 			<colgroup>
@@ -60,18 +61,18 @@
 			<tbody>
 				<tr>
 					<td>37</td>
-					<td>과일</td>
-					<td>제주귤청</td>
-					<td>김귤이</td>
+					<td>배추</td>
+					<td>팜셰어링</td>
+					<td>견우도</td>
 					<td>Y</td>
 					<td>2017-03-22 13:00:15</td>
 					<td>2017-03-30</td>
-					<td>1,600,000</td>
-					<td>1,600,000</td>
-					<td>15</td>
+					<td>10</td>
+					<td>10</td>
+					<td>4</td>
 					<td>100%</td>
 					<td>모집완료</td>
-					<td><button>V</button></td>
+					<td><button id="btn" onclick="layer_open('layer3');return false;">지급</button><span id="text" style="display: none;">지급완료</span></td>
 				</tr>
 				<tr>
 					<td>36</td>
@@ -86,7 +87,7 @@
 					<td>10</td>
 					<td>65.3%</td>
 					<td>모집중</td>
-					<td><button>V</button></td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>35</td>
@@ -101,9 +102,85 @@
 					<td>7</td>
 					<td>82.1%</td>
 					<td>모집중</td>
-					<td><button>V</button></td>
+					<td>-</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </div>
+
+<div class="layer">
+	<div class="bg"></div>
+	<div id="layer3" class="pop-layer">
+		<div class="pop-container popup_container">
+			<div class="pop-conts">
+				<!--content //-->
+				<div class="btn-r">
+					<a href="#" class="cbtn"><img src="../images/common/icon_close.png" /></a>
+				</div>
+				<p class="ctxt mb20">
+					<span class="popup_title_big">
+            농작교의 약정 계좌에서<br>
+            차보람님의 핀-어카운트로<br>
+            계좌로 <strong>10</strong>원을 입금 하시겠습니까?
+          </span>
+					<!--					<span class="popup_title_normal">생활투자를 위해<br/>지금 투자자 등록을 하시겠습니까?</span>-->
+					<button type="submit" class="btn_green" onclick="ok();">확인</button>
+					<button type="submit" class="btn_gray">취소</button>
+				</p>
+				<!--// content-->
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".header").hide();
+
+	function layer_open(el){
+
+		var temp = $('#' + el);
+		var bg = temp.prev().hasClass('bg');
+		if(bg){
+			$('.layer').fadeIn();
+		}else{
+			temp.fadeIn();
+		}
+
+		// 화면의 중앙에 레이어를 띄운다.
+		if (temp.outerHeight() < $(document).height() ) temp.css('margin-top', '-'+temp.outerHeight()/2+'px');
+		else temp.css('top', '0px');
+		if (temp.outerWidth() < $(document).width() ) temp.css('margin-left', '-'+temp.outerWidth()/2+'px');
+		else temp.css('left', '0px');
+
+		temp.find('button.btn_gray').click(function(e){
+			if(bg){
+				$('.layer').fadeOut();
+			}else{
+				temp.fadeOut();
+			}
+			e.preventDefault();
+		});
+
+        temp.find('a.cbtn').click(function(e){
+			if(bg){
+				$('.layer').fadeOut();
+			}else{
+				temp.fadeOut();
+			}
+			e.preventDefault();
+		});
+
+		$('.layer .bg').click(function(e){
+			$('.layer').fadeOut();
+			e.preventDefault();
+		});
+
+	}
+
+	function ok() {
+		alert("지급되었습니다.");
+		$('.layer').fadeOut();
+		$("#btn").hide();
+		$("#text").show();
+	}
+</script>
