@@ -744,7 +744,6 @@ div.m_olley_panel.show{
 	margin:auto;
 	border-bottom:2px solid #999;
 	margin-bottom:20px;
-	margin-top:15px;
 	clear:both;
 }
 @media all and (min-width: 1024px) {
@@ -787,8 +786,8 @@ div.m_olley_panel.show{
 }
 .bottom_comany_info ul li {
 	text-align:left;
-	font-size:0.9em;
-	line-height:20px;
+	font-size:13px;
+	line-height:22px;
 	letter-spacing:-0.5px;
 	color:#999;
 }
@@ -1348,10 +1347,58 @@ div.icon_progress{
 }
 
 
+/*ADMIN*/
+#admin_wrap{
+    height:100vh;
+}
+#admin_title{
+    width:100%;
+    height:8vh;
+    background-color:#333;
+    text-align:left;
+    padding-left:30px;
+    margin-top:-20px;
+}
+#admin_title h2{
+    color:#fff;
+    font-size:24px;
+    font-weight:500;
+    line-height: 8vh;
+}
 
+#admin_menu{
+    float:left;
+    width:250px;
+    height:92vh;
+    background-color:#f0f0f0;
+    border-right:3px solid #eee;
+}
+#admin_menu .logo_Area{
+    position: fixed;
+    width:250px;
+    bottom:0px;
+    height:160px;
+}
+#admin_menu .logo_Area img{
+    width:200px;
+    
+}
+#admin_menu ul li{
+    height: 60px;
+    line-height: 60px;
+    color:#333;
+    font-size:18px;
+    font-weight:500;
+    border-bottom:2px solid #ddd;
+}
+#admin_menu ul li{
+    background:url(../images/common/icon_right.png)no-repeat;
+    background-position:  220px;
+}
 
-
-
-
+#admin_content{
+    float:left;
+    width:1200px;
+}
 
 

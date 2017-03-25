@@ -104,7 +104,10 @@
     transition-duration: 0.5s;
 }
 .payment_btn:hover{
-	background-color:#003000;
+	 background: linear-gradient(to right,#002600,#126c00,#126c00,#002600);
+    background-size: 500% 500%;
+    -webkit-animation: AnimationName 5s linear infinite;
+    animation: AnimationName 5s linear infinite;
 	color:#fff;
 	font-weight:600;
 }
@@ -113,7 +116,10 @@
 	width:200px;
 }
 .more_all_btn:hover{
-	background-color:#003000;
+    background: linear-gradient(to right,#002600,#126c00,#126c00,#002600);
+    background-size: 500% 500%;
+    -webkit-animation: AnimationName 5s linear infinite;
+    animation: AnimationName 5s linear infinite;
 	color:#fff;
 	font-weight:600;
 }
