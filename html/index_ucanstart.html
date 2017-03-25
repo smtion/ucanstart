@@ -1,44 +1,40 @@
-<!DOCTYPE html PUBLIC "-//w3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>메인페이지</title>
-<link rel="stylesheet" type="text/css" href="../css/olley_161202.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_subpages.css" />
-<link rel="stylesheet" type="text/css" href="../css/common.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_btns.css" />
+	<title>메인페이지</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<!--bootstrap default-->
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/olley_161202.css">
+	<link rel="stylesheet" href="../css/olley_subpages.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/olley_btns.css">
+	<link rel="stylesheet" href="../css/popup.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
 
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
 
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<!--rolling-->
-<link rel="stylesheet" href="../css/swiper.min.css">
-<script src="../js/swiper.min.js"></script>
-<link rel="stylesheet" href="../css/swiper.css">
-<script src="../js/swiper.js"></script>
+	<script src="../js/app/app.module.js"></script>
+	<script src="../js/app/main.controller.js"></script>
+	<script src="../js/app/payment.controller.js"></script>
+	<script src="../js/app/reward.controller.js"></script>
 
-<!--fonts-->
-<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!--토글스크립트,중복시 제거-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi" />
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-<body>
+<body ng-controller="mainController">
 	<div class="header">
     	<div class="w_header">
-        <h1><img src="../images/logo.png"/ style="width:100px;margin-top:-6px;"></h1>
+        <h1><img src="../images/logo.png" style="width:100px;margin-top:-6px;"></h1>
             <ul class="nav_left top_menu">
             	<li>
                 	<a href="#">프로젝트 둘러보기</a>
@@ -101,13 +97,13 @@
             <div class="invest_banners">
             	<h2>진행중인 프로젝트</h2>
                 <div class="redBar"></div>
-                <div class="invest_banner_center">  
+                <div class="invest_banner_center">
                     <div class="invest_banner">
                         <div class="banner_box">
                         <a href="#">
                             <div class="banner_statement">
                                 <div class="banner_statement_imgbox">
-                                <img src="../images/main/banner_statement_bg.png" />
+                                <img src="../images/main/banner_statement_bg.png">
                                 </div>
                                 <div class="progress">
                                   <div class="invest_progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
@@ -136,7 +132,7 @@
                         <a href="#">
                             <div class="banner_statement">
                                 <div class="banner_statement_imgbox">
-                                <img src="../images/main/banner_statement_bg2.png" />
+                                <img src="../images/main/banner_statement_bg2.png">
                                 </div>
                                 <div class="progress">
                                   <div class="invest_progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
@@ -165,7 +161,7 @@
                         <a href="#">
                             <div class="banner_statement">
                                 <div class="banner_statement_imgbox">
-                                <img src="../images/main/banner_statement_bg3.png" />
+                                <img src="../images/main/banner_statement_bg3.png">
                                 </div>
                                 <div class="progress">
                                   <div class="invest_progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
@@ -256,16 +252,16 @@
 </script>
 <script type="text/javascript">
 	$(function(){
-	   $(".m_menu_icon").click(function(){ 
+	   $(".m_menu_icon").click(function(){
 	﻿     document.getElementById("mySidenav").style.width = "80%";
 		 document.getElementById("wrap_bk").style.width = "100%";
-	   }); 
+	   });
 	});
 	$(function(){
-	   $(".m_close,#wrap_bk").click(function(){ 
+	   $(".m_close,#wrap_bk").click(function(){
 	﻿      document.getElementById("mySidenav").style.width = "0";
 		  document.getElementById("wrap_bk").style.width = "0";
-	   }); 
+	   });
 	});
 		 </script>
          <script><!--Accordion-->
