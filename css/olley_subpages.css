@@ -1452,7 +1452,7 @@ div.olley_panel.show {
     color: #ff8a00 !important;
 }
 p.sum{
-    margin-top:30px;
+    margin-top:10px;
     font-size:18px;
     font-weight:500;
 }
@@ -4063,7 +4063,7 @@ input[type=text], input[type=number], input[type=password], textarea {
 }
 .sub_full .paymentBtn_area{
     width:100%;
-    padding:30px 0 80px 0;
+    padding:15px 0px 15px 0px;
 }
 .sub_full button.pay_btn {
     width:150px;
@@ -4150,7 +4150,7 @@ input[type=text], input[type=number], input[type=password], textarea {
 .card_Recommend img{
     border-radius: 11px;
     box-shadow: 0px 0px 60px 5px rgba(150,190,250,0.5);
-    margin-bottom:30px;
+    margin-bottom:36px;
 }
 .card_Recommend .icon_down{
     box-shadow: none;
@@ -4166,4 +4166,40 @@ input[type=text], input[type=number], input[type=password], textarea {
 .card_Recommend p strong{
     font-size:24px;
     color:#005000; 
+}
+button.balance{
+    width:150px;
+    height:45px;
+    line-height:45px;
+    background-color: #004000;
+    border: 1px solid #007000;
+    color:#fff;
+    text-align: center;
+    text-decoration: none !important;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 3px;
+    margin:30px 10px;
+    transition-duration: 0.2s;
+}
+button.balance:hover{
+    background-color:#002000;
+}
+.balance_output{
+    width:550px;
+    background-color:#f0f0f0;
+    padding:30px;
+    margin:20px auto 25px;
+    border:1px solid #ddd;
+    border-radius: 3px;
+}
+.balance_output p{
+    font-size:15px;
+    line-height: 28px;
+    margin-bottom:0px;
+}
+.balance_output p strong{
+    font-size: 30px;
+    color:#006000;
 }

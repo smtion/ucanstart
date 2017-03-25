@@ -103,7 +103,28 @@
 	font-size:16px !important;
     transition-duration: 0.5s;
 }
+.payment_btn_off {
+	width:240px;
+	height:55px;
+	background-color:transparent;
+	border:1.5px solid #666 !important;
+	color:#666;
+	margin-top:50px;
+	margin-bottom:30px !important;
+	font-weight:500 !important;
+	border-radius:27.5px !important;
+	font-size:16px !important;
+    transition-duration: 0.5s;
+}
 .payment_btn:hover{
+	 background: linear-gradient(to right,#002600,#126c00,#126c00,#002600);
+    background-size: 500% 500%;
+    -webkit-animation: AnimationName 5s linear infinite;
+    animation: AnimationName 5s linear infinite;
+	color:#fff;
+	font-weight:600;
+}
+.payment_btn_on{
 	 background: linear-gradient(to right,#002600,#126c00,#126c00,#002600);
     background-size: 500% 500%;
     -webkit-animation: AnimationName 5s linear infinite;

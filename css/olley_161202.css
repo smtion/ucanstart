@@ -188,6 +188,7 @@ a{text-decoration: none !important;}
     border-radius: 16px;
     margin-top:14px;
     background-image: url(../images/common/profile_img.jpg);
+    background-size: cover;
 }
 .w_header .nav_right li:last-child a{
 	border-right:0;
@@ -1371,7 +1372,7 @@ div.icon_progress{
     width:250px;
     height:92vh;
     background-color:#f0f0f0;
-    border-right:3px solid #eee;
+    border-right:3px solid #ddd;
 }
 #admin_menu .logo_Area{
     position: fixed;
@@ -1390,6 +1391,10 @@ div.icon_progress{
     font-size:18px;
     font-weight:500;
     border-bottom:2px solid #ddd;
+    cursor: pointer;
+}
+#admin_menu ul li:hover{
+    background-color:#ddd;
 }
 #admin_menu ul li{
     background:url(../images/common/icon_right.png)no-repeat;
