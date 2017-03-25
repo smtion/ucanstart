@@ -18,10 +18,17 @@
     // ----------
 
     function get(key) {
-      return window.localStorage.getItem(key);
+      var value = window.localStorage.getItem(key);
+      try {
+        value = JSON.parse(value);
+      } catch (e) {
+        
+      }
+      return value;
     }
 
     function set(key, value) {
+      if (typeof value == 'object') value = JSON.stringify(value);
       window.localStorage.setItem(key, value);
     }
 
