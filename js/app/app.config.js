@@ -71,6 +71,18 @@
         controller: 'orderDoneController',
         controllerAs: 'vm'
       })
+      .state('sms', {
+        url: '/sms',
+        templateUrl: 'html/marketing.html'
+      })
+      .state('sms2', {
+        url: '/sms2',
+        templateUrl: 'html/marketing_2.html'
+      })
+      .state('admin', {
+        url: '/admin',
+        templateUrl: 'html/admin.html'
+      })
       ;
   }
 })();

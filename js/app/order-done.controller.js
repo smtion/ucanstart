@@ -16,6 +16,7 @@
     vm.isCanceled = false;
     vm.goHome = goHome;
     vm.getBalance = getBalance;
+    vm.sendSMS = sendSMS;
     vm.cancel = cancel;
 
     activate();
@@ -31,6 +32,10 @@
         console.log('Error');
       }
       vm.product = storage.get('product');
+    }
+
+    function sendSMS() {
+      $state.go('sms');
     }
 
     function goHome() {
@@ -66,7 +71,7 @@
             vm.product.current = parseInt(vm.product.current) - parseInt(vm.amount);
             storage.set('product', vm.product);
             alert("결제취소가 완료되었습니다.\n메인화면으로 이동합니다.");
-            $state('main');
+            $state.go('main');
           }
           vm.isSubmitted = false;
         },

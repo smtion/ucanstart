@@ -55,7 +55,8 @@
 		<!--sub_contents_bg end-->
 
 		<div class="paymentBtn_area mt25" style="padding-bottom:60px;">
-			<button class="pay_btn home" ng-click="vm.goHome();">홈으로</button>
+			<!-- <button class="pay_btn home" ng-click="vm.goHome();">홈으로</button> -->
+			<button class="pay_btn home" ng-click="vm.sendSMS();">SMS 발송</button>
       <button class="pay_btn cancel" ng-click="vm.cancel();" ng-disabled="vm.isSubmitted || vm.isCanceled">
 				<span ng-switch="vm.isSubmitted">
 					<span ng-switch-when="true">처리 중</span>
@@ -169,7 +170,7 @@
 						</div>
 					</div>
 					<div style="width:100%;clear:both;">
-						<button type="button" class="more_all_btn">더 많은 프로젝트 보기</button>
+						<button type="button" class="more_all_btn" ui-sref="main">더 많은 프로젝트 보기</button>
 					</div>
 				</div>
 			</div>

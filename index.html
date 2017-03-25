@@ -43,8 +43,8 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body ng-cloak>
-	<div class="header">
+<body ng-cloak ng-controller="index">{{ $scope.menu  }}
+	<div class="header" ng-hide="$scope.menu == 'admin'">
   	<div class="w_header">
       <h1><a href="/"><img src="images/logo_w.png" style="width:190px;margin-top:-6px;"></a></h1>
       <ul class="nav_left top_menu">
@@ -52,6 +52,7 @@
 	      <li><a href="#">프로젝트 시작하기</a></li>
 	  	</ul>
 	  	<ul class="nav_right top_menu">
+        <li><a href="admin">관리자</a></li>
         <li><a href="#">로그아웃</a></li>
         <li><a href="#"><p class="profile_thum"></p></a></li>
       </ul>
@@ -142,5 +143,13 @@ for (i = 0; i < acc.length; i++) {
 		this.nextElementSibling.classList.toggle("show");
   }
 }
+</script>
+<script>
+	angular.module('app').controller('index', function ($scope, $state) {
+		setTimeout(function() {
+			$scope.menu = $state.current.name;
+			console.log($state.current.name);
+		}, 100);
+	});
 </script>
 </html>
