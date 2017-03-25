@@ -19,6 +19,8 @@
       get: get,
       status: status,
       balance: balance,
+      withdraw: withdraw,
+      deposit: deposit,
       history: history
     };
 
@@ -65,6 +67,40 @@
     }
 
     function balance() {
+      var api = {
+        Header: {
+          ApiNm: "InquireBalance",
+          ApiSvcCd: "04Q_003_F0"
+        },
+        FinAcno: FinAcno
+      };
+
+      return $q(function (resolve, reject) {
+        var promise = send(api);
+        promise.success(function (res) { resolve(JSON.parse(res)); });
+        promise.error(function (res) { reject(false); });
+      });
+    }
+
+    function withdraw(Tram) {
+      var api = {
+        Header: {
+          ApiNm: "DrawingTransfer",
+          ApiSvcCd: "01D_001_00"
+        },
+        FinAcno: FinAcno,
+        Tram: Tram,
+        DractOtlt: "농작교"
+      };
+
+      return $q(function (resolve, reject) {
+        var promise = send(api);
+        promise.success(function (res) { resolve(JSON.parse(res)); });
+        promise.error(function (res) { reject(false); });
+      });
+    }
+
+    function deposit() {
       var api = {
         Header: {
           ApiNm: "InquireBalance",
@@ -129,7 +165,7 @@
       };
       $.extend(api.Header, common.Header);
       //jsonData = $.extend(jsonData, param);
-      console.log(api);
+      // console.log(api);
       var jsonData = api;
 
       jsonData = JSON.stringify(jsonData);

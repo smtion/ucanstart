@@ -1,0 +1,98 @@
+<div class="invest_banner info">
+	<div class="contents_wrap">
+		<div class="t-c">
+			<h1 class="fw-b fs-35">농작교님의 <span class="fc-skyblue">1</span>번째 UP!</h1>
+			<h4 class="mt5">다함께 배추 농사</h4>
+		</div>
+	</div>
+</div>
+<div class="wrap sub_wrap">
+	<div class="sub_full">
+		<div class="sub_contents_bg">
+			<p class="title_order">배송정보<span class="fs-12 fc-orange">※ 배송 및 결제관련 중요정보가 등록된 연락처로 발송됩니다. 정확한 정보를 입력해주세요.</span></p>
+			<div class="qnalist_contents">
+				<div class="reward_box info">
+					<table>
+						<colgroup>
+							<col style="width:120px;">
+							<col style="width:500px;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>*이름</th>
+								<td><input type="text" name="consumerName" readonly="readonly" value="홍길동" class="full essential"></td>
+							</tr>
+							<tr>
+								<th>*연락처</th>
+								<td><input type="text" name="consumerPhone" readonly="readonly" value="010-1234-5678" class="full essential"></td>
+							</tr>
+							<tr>
+								<th>*주소</th>
+								<td>
+									<p>
+										<input type="text" name="consumerZipcode" readonly="readonly" value="001110" class="essential">
+										<a href="" class="btn_type4" onclick="sample7_execDaumPostcode(event)">우편번호 찾기</a>
+									</p>
+									<p>
+										<input type="text" name="consumerAddr1" readonly="readonly" value="서울특별시 " class="full essential">
+										<input type="text" name="consumerAddr2" readonly="readonly" value="9층" class="full essential">
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<th>*이메일</th>
+								<td><input type="text" name="consumerEmail" readonly="readonly" value="uncanstart@ucanstart.com" class="full essential"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!----qnalist_contents end---->
+		</div>
+		<!--sub_contents_bg end-->
+		<div class="sub_contents_bg">
+			<p class="title_order">결제방식 선택</p>
+			<div class="qnalist_contents">
+				<div class="reward_box info">
+					<div class="paymentBtn_area" style="margin-top:30px;border-bottom:none;">
+						<p class="fs-16"><strong class="fc-green">농작교페이</strong>로 최종결제 금액</p>
+						<p class="sum">
+							<span>{{ vm.amount }}</span>원을<br>결제 하시겠습니까?
+						</p>
+					</div>
+				</div>
+				<div class="paymentBtn_area">
+					<button class="pay_btn" ng-click="vm.paymentMethod = 'credit'" ng-class="{active: vm.paymentMethod == 'credit'}">신용/체크카드</button>
+					<button class="pay_btn" ng-click="vm.paymentMethod = 'njpay'; vm.getBalance();" ng-class="{active: vm.paymentMethod == 'njpay'}">농작교페이</button>
+					<button class="pay_btn" ng-click="vm.paymentMethod = 'vacs'" ng-class="{active: vm.paymentMethod == 'vacs'}">가상계좌 이체</button>
+				</div>
+				<div class="reward_box info" ng-show="vm.paymentMethod == 'njpay'">
+					<div class="paymentBtn_area" style="margin-top:30px;border-bottom:none;">
+						<div class="balance_output">
+							<p>김까치 고객님의 <span class="fc-green">농작교페이</span> 잔액은 현재<br>
+								<span ng-switch="vm.isLoading">
+									<span ng-switch-when="true"><spinner size="xs" is-loading="vm.isLoading"></spinner></span>
+									<span ng-switch-when="false"><strong>{{ vm.balance | number }}</strong>원입니다.</span>
+								</span></p>
+							<button class="balance" ng-click="vm.getBalance();">잔액 확인하기</button>
+						</div>
+						<p class="ft-14">
+							<div class="checkbox">
+								<label type="checkbox">
+									<input type="checkbox" ng-model="vm.agreement"> 결제정보를 확인하였으며, 구매진행에 동의합니다.
+								</label>
+							</div>
+						</p>
+						<!----qnalist_contents end---->
+						<div style="margin-left:-3px;">
+							<button type="button" ng-class="{payment_btn: vm.agreement, payment_btn_off: !vm.agreement}" ng-click="vm.pay()" ng-disabled="!vm.agreement">결제 진행하기</button>
+							<!--동의 체크후 payment_btn_on클래스로 버튼 활성화-->
+						</div>
+					</div>
+					<!--sub_full end-->
+				</div>
+				<!--wrap-end-->
+			</div>
+		</div>
+	</div>
+</div>

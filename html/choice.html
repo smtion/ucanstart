@@ -1,0 +1,162 @@
+<div class="invest_banner info">
+	<div class="contents_wrap">
+		<div class="t-c">
+			<h1 class="fw-b fs-35">농작교님의 <span class="fc-skyblue">1</span>번째 UP!</h1>
+			<h4 class="mt5">다함께 배추 농사</h4>
+		</div>
+	</div>
+</div>
+<div class="wrap sub_wrap">
+	<div class="sub_full">
+		<div class="sub_contents_bg">
+			<div class="qnalist_contents">
+				<div class="tab_content" id="tab1">
+					<div class="accordion">
+						<span><label type="checkbox" title="상품정보 이용안내 동의" class="chk_box_gray">&nbsp;</label>리워드1</span>
+						<span>이 프로젝트를 응원하고 싶은 만큼 자유롭게 금액을 입력 할 수 있습니다.</span>
+					</div>
+					<div class="olley_panel">
+						<dl>
+							<dt class="line">금액</dt>
+							<dd>
+								10,000 원
+							</dd>
+							<dt class="line">수량</dt>
+							<dd>
+								<input type="number" name="count" class="calc_key" value="1">건 (구매가능수량 : 무제한)
+							</dd>
+							<dt class="line">옵션메세지</dt>
+							<dd>
+								<input type="text" name="rewardOption" class="full" placeholder="옵션을 입력해주세요. ex ) 컬러 블루 1개, 레드1개, 사이즈 L로 모두~">
+							</dd>
+							<dt class="line">배송비</dt>
+							<dd>
+								착불
+								<span class="fs-12 fc-orange">*리워드는 착불 배송됩니다. 유의해주세요!</span>
+							</dd>
+							<dt class="line">예상 제공일</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<!--pannel1-->
+					<div class="accordion">
+						<span><label type="checkbox" title="상품정보 이용안내 동의" class="chk_box_gray">&nbsp;</label>리워드2</span>
+						<span>이 프로젝트를 응원하고 싶은 만큼 자유롭게 금액을 입력 할 수 있습니다.</span>
+					</div>
+					<div class="olley_panel">
+						<dl>
+							<dt class="line">금액</dt>
+							<dd>
+								10,000 원
+							</dd>
+							<dt class="line">수량</dt>
+							<dd>
+								<input type="number" name="count" class="calc_key" value="1">건 (구매가능수량 : 무제한)
+							</dd>
+							<dt class="line">옵션메세지</dt>
+							<dd>
+								<input type="text" name="rewardOption" class="full" placeholder="옵션을 입력해주세요. ex ) 컬러 블루 1개, 레드1개, 사이즈 L로 모두~">
+							</dd>
+							<dt class="line">배송비</dt>
+							<dd>
+								착불
+								<span class="fs-12 fc-orange">*리워드는 착불 배송됩니다. 유의해주세요!</span>
+							</dd>
+							<dt class="line">예상 제공일</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<!--pannel2-->
+					<div class="accordion">
+						<span><label type="checkbox" title="상품정보 이용안내 동의" class="chk_box_gray">&nbsp;</label>리워드3</span>
+						<span>이 프로젝트를 응원하고 싶은 만큼 자유롭게 금액을 입력 할 수 있습니다.</span>
+					</div>
+					<div class="olley_panel">
+						<dl>
+							<dt class="line">금액</dt>
+							<dd>
+								10,000 원
+							</dd>
+							<dt class="line">수량</dt>
+							<dd>
+								<input type="number" name="count" class="calc_key" value="1">건 (구매가능수량 : 무제한)
+							</dd>
+							<dt class="line">옵션메세지</dt>
+							<dd>
+								<input type="text" name="rewardOption" class="full" placeholder="옵션을 입력해주세요. ex ) 컬러 블루 1개, 레드1개, 사이즈 L로 모두~">
+							</dd>
+							<dt class="line">배송비</dt>
+							<dd>
+								착불
+								<span class="fs-12 fc-orange">*리워드는 착불 배송됩니다. 유의해주세요!</span>
+							</dd>
+							<dt class="line">예상 제공일</dt>
+							<dd>
+
+							</dd>
+						</dl>
+					</div>
+					<!--pannel3-->
+				</div>
+
+
+			</div>
+			<!----qnalist_contents end---->
+		</div>
+		<!--sub_contents_bg end-->
+
+		<p class="sum">
+			총 결제금액 <span>{{ vm.balance }}</span>원
+		</p>
+		<p class="sum">
+			총 결제금액 <span>0</span>원
+		</p>
+
+
+		<div style="margin-left:-3px;">
+			<button type="button" class="payment_btn">결제 진행하기</button>
+		</div>
+	</div>
+	<!--sub_full end-->
+</div>
+<!--wrap-end-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.tab_demo li').click(function() {
+			$('.qnalist_tabs').removeClass('olley_qnatap_on');
+			$(this).addClass('olley_qnatap_on');
+			id = $(this).attr('tab-id');
+			$('.tab_content').hide();
+			$('#' + id).show();
+		});
+		$(".chk_box_gray").click(function() {
+			$(".chk_box_gray").toggleClass("chk_box_gray_click");
+		});
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].onclick = function() {
+				this.classList.toggle("active");
+				this.nextElementSibling.classList.toggle("show");
+			}
+		}
+	});
+	<!--Accordion-->
+</script>
+<!--
+<script>
+$(document).ready(function(){
+    $(".chk_box_gray").click(function(){
+        $(this).toggleClass("chk_box_gray_click");
+    });
+});
+</script>
+-->
+</body>
+
+</html>

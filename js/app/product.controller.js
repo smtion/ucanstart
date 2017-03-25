@@ -4,25 +4,29 @@
   angular.module('app')
     .controller('productController', productController);
 
-  productController.$inject = ['$scope', 'storage'];
-  function productController($scope, storage) {
+  productController.$inject = ['$scope', 'storage', '$state'];
+  function productController($scope, storage, $state) {
     var vm = this;
     vm.product = {};
-
+    vm.rewards = [];
+    vm.order = order;
     activate();
 
     // ----------
 
     function activate() {
       init();
-      reload();
     }
 
     function init() {
       vm.product = storage.get('product');
+      vm.rewards = [1, 2, 3, 4];
     }
 
-    function reload() {
+    function order(index) {
+      // $stateParams
+      console.log(vm.rewards[index]);
+      $state.go('order', {a: vm.rewards[index]});
     }
   }
 })();

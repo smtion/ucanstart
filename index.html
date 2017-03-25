@@ -20,18 +20,23 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.min.js"></script>
+	<script src="js/spin.min.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/angular-route.min.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
 
 	<script src="js/app/app.module.js"></script>
 	<script src="js/app/app.config.js"></script>
 	<script src="js/app/nh.service.js"></script>
 	<script src="js/app/storage.service.js"></script>
+	<script src="js/app/spinner.directive.js"></script>
 
 	<script src="js/app/main.controller.js"></script>
 	<script src="js/app/payment.controller.js"></script>
 	<script src="js/app/reward.controller.js"></script>
 	<script src="js/app/product.controller.js"></script>
+	<script src="js/app/choice.controller.js"></script>
+	<script src="js/app/order.controller.js"></script>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,7 +57,7 @@
     </div><!--web header end-->
   </div>
 	<div class="wrap">
-    <ng-view autoscroll="true"></ng-view>
+    <ui-view autoscroll="true"></ui-view>
 	</div><!--wrap-end-->
 	<div class="footer_full">
     <div class="footer">
