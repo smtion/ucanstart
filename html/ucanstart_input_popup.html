@@ -1,0 +1,106 @@
+<html ng-app="app">
+<head>
+	<title>메인페이지</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi">
+
+	<link rel="stylesheet" href="../css/olley_161202.css">
+	<link rel="stylesheet" href="../css/olley_subpages.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/olley_btns.css">
+	<link rel="stylesheet" href="../css/popup.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+
+	<script src="../js/app/app.module.js"></script>
+	<script src="../js/app/main.controller.js"></script>
+	<script src="../js/app/payment.controller.js"></script>
+	<script src="../js/app/reward.controller.js"></script>
+
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body ng-controller="paymentController">
+
+<!---성공팝업--->
+<a href="#" class="btn-example" onclick="layer_open('layer3');return false;">팝업</a>
+<div class="layer">
+	<div class="bg"></div>
+	<div id="layer3" class="pop-layer">
+		<div class="pop-container popup_container">
+			<div class="pop-conts">
+				<!--content //-->
+				<div class="btn-r">
+				<a href="#" class="cbtn"><img src="../images/common/icon_close.png" /></a>
+				</div>
+                <p class="ctxt mb20">
+                    <span class="popup_title_big">
+                        농작교의 약정 계좌(110-222222-111)에서<br>
+                        차보람님의 핀-어카운트(0002-1111111-002)<br>
+                        계좌로 <strong>1,600,000</strong>원을 입금 하시겠습니까?                    
+                    </span>
+<!--					<span class="popup_title_normal">생활투자를 위해<br/>지금 투자자 등록을 하시겠습니까?</span>-->
+                    <button type="submit" class="btn_green">확인</button>
+                    <button type="submit" class="btn_gray">취소</button>
+				</p>
+				<!--// content-->
+			</div>
+		</div>
+	</div>
+</div>
+<!------>
+<script type="text/javascript">
+	function layer_open(el){
+
+		var temp = $('#' + el);
+		var bg = temp.prev().hasClass('bg');
+		if(bg){
+			$('.layer').fadeIn();
+		}else{
+			temp.fadeIn();
+		}
+
+		// 화면의 중앙에 레이어를 띄운다.
+		if (temp.outerHeight() < $(document).height() ) temp.css('margin-top', '-'+temp.outerHeight()/2+'px');
+		else temp.css('top', '0px');
+		if (temp.outerWidth() < $(document).width() ) temp.css('margin-left', '-'+temp.outerWidth()/2+'px');
+		else temp.css('left', '0px');
+
+		temp.find('button.btn_gray').click(function(e){
+			if(bg){
+				$('.layer').fadeOut();
+			}else{
+				temp.fadeOut();
+			}
+			e.preventDefault();
+		});
+
+        temp.find('a.cbtn').click(function(e){
+			if(bg){
+				$('.layer').fadeOut();
+			}else{
+				temp.fadeOut();
+			}
+			e.preventDefault();
+		});
+
+		$('.layer .bg').click(function(e){
+			$('.layer').fadeOut();
+			e.preventDefault();
+		});
+
+	}
+</script>
+</body>
+</html>
