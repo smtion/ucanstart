@@ -1458,3 +1458,61 @@ div.icon_progress{
     border-radius: 5px;
     border:none;
 }
+
+
+#iphone_bg{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(to bottom right,#8dc63f,#009444,#009444,#8dc63f);
+    background-size: 500% 500%;
+}
+
+@keyframes iphone {
+    0%{margin-top:1000px;}
+    100%{margin-top:30px;}
+}
+@keyframes marketing {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#iphone_bg img{
+    margin-top:30px;
+    margin-right:400px;
+    -webkit-animation: iphone 1.5s ease-out;
+    animation: iphone 1.5s ease-out;
+}
+#iphone_bg h2{
+    position:absolute;
+    top:200px;
+    right:450px;
+    font-size:100px;
+    font-weight:100;
+    letter-spacing: -0.05em;
+    color:#fff;
+    text-align:left;
+    opacity:1;
+    -webkit-animation: marketing 2s ease-out;
+    animation: marketing 2s ease-out;
+}
+
+#iphone_bg2{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(to bottom right,#8dc63f,#009444,#009444,#8dc63f);
+    background-size: 500% 500%;
+}
+#iphone_bg2 img{
+    margin-top:30px;
+    margin-right:400px;
+}
+#iphone_bg2 h2{
+    position:absolute;
+    top:200px;
+    right:450px;
+    font-size:100px;
+    font-weight:100;
+    letter-spacing: -0.05em;
+    color:#fff;
+    text-align:left;
+}
