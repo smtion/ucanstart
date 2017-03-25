@@ -21,6 +21,7 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/swiper.min.js"></script>
 	<script src="../js/angular.min.js"></script>
+	<script src="../js/angular-route.min.js"></script>
 
 	<script src="../js/app/app.module.js"></script>
 	<script src="../js/app/app.config.js"></script>
@@ -30,6 +31,7 @@
 	<script src="../js/app/main.controller.js"></script>
 	<script src="../js/app/payment.controller.js"></script>
 	<script src="../js/app/reward.controller.js"></script>
+	<script src="../js/app/product.controller.js"></script>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,7 +40,7 @@
 <body ng-controller="mainController" ng-cloak>
 	<div class="header">
   	<div class="w_header">
-      <h1><a href=""><img src="../images/logo_w.png" style="width:190px;margin-top:-6px;"></a></h1>
+      <h1><a href="index_ucanstart.html"><img src="../images/logo_w.png" style="width:190px;margin-top:-6px;"></a></h1>
       <ul class="nav_left top_menu">
       	<li><a href="#">프로젝트 둘러보기</a></li>
 	      <li><a href="#">프로젝트 시작하기</a></li>
@@ -49,6 +51,9 @@
       </ul>
     </div><!--web header end-->
   </div>
+
+	<ng-view></ng-view>
+
 	<div class="wrap">
     <div class="web_main">
       <div class="main_image"></div>
