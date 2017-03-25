@@ -1531,7 +1531,7 @@ p.sum span{
 }
 .olley_funding_contents_bg{
 	width:100%;
-	height:710px;
+	height:760px;
 	float:left;
 	overflow-x: hidden;
 }
@@ -1543,21 +1543,21 @@ p.sum span{
 }
 .olley_funding_contents p {
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
     max-width: 360px;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 125px;
 }
 .olley_funding_contents h3 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: -0.5px;
     line-height: 25px;
 	margin-top:10px;
 }
 .row.funding_banner_area{
-	padding-top:40px;
+	padding-top:46px;
 	width:100%;
 	max-width:1200px;
 	margin-right:0;
@@ -1608,7 +1608,7 @@ p.sum span{
 	font-size:1.7em;
 	font-weight:700;
 	color:#333;
-	margin-bottom:24px;
+	margin-bottom:32px;
 }
 .funding_banner_detail .banner_detail span.txt_small{
 	font-size:18px;
@@ -1619,27 +1619,33 @@ p.sum span{
 }
 .funding_progress_box{
 	width:100%;
-	margin-bottom:10px;
+	margin-bottom:15px;
 }
 .funding_progress_bg{
 	width: 100%;
-    height: 8px;
-	border-radius:4px;
+    height: 10px;
+	border-radius:5px;
     margin: 0;
     padding: 0;
     background-color:#ccc;
 }
 .funding_banner_detail .funding_progress {
     width: 100%;
-    height: 8px;
-	border-radius:4px;
+    height: 10px;
+	border-radius:5px;
     margin: 0;
     padding: 0;
+/*
     background: #126c00;
     background: -webkit-linear-gradient(to right, #e4ff00, #126c00, #002600);
     background: -o-linear-gradient(to right, #e4ff00, #126c00, #002600);
     background: -moz-linear-gradient(to right, #e4ff00, #126c00, #002600);
     background: linear-gradient(to right, #e4ff00, #126c00, #002600);
+*/
+    background: linear-gradient(to right,#e4ff00,#126c00,#002600,#126c00,#e4ff00);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 4s linear infinite;
+    animation: AnimationName 4s linear infinite;
 }
 
 div.icon_funding_progress {
@@ -2017,7 +2023,7 @@ div.icon_funding_progress {
 }
 .invest_report_pages span.invest_report_title{
 	display:block;
-	font-size:1.2em;
+	font-size:20px;
 	font-weight:700;
 	color:#004000;
 	clear:both;
@@ -2091,6 +2097,10 @@ table.report_box_table td:nth-child(2){
 	clear:both;
 	max-width:1200px;
 	float:left;
+    padding:20px 0 15px 0;
+}
+.invest_report_pages .border_box p{
+	font-size:15px;
 }
 .invest_report_pages .report_box{
 	padding-right:0;
@@ -3766,7 +3776,7 @@ table.table_modal td:nth-child(2){
     width:100%;
 }
 .tab_sidebar .list_cont li{
-    margin: 0 0 15px;
+    margin: 0 0 26px;
     padding: 0;
     width: 100%;
     border-radius: 3px;
@@ -3785,13 +3795,13 @@ table.table_modal td:nth-child(2){
     border-top-right-radius: 4px;
 }
 .tab_sidebar .list_cont li .reward_text:hover{
-    background-color:#f9f9f9;
+    background-color:#fff;
 }
 .tab_sidebar .list_cont li .ic_person {
     font-size: 13px;
     color: #343434;
     padding-left: 18px;
-    background-position: left 5px;
+    background-position: left 1px;
     background-repeat: no-repeat;
 }
 .ic_person {
@@ -3811,7 +3821,7 @@ table.table_modal td:nth-child(2){
     height:40px;
     font-size:16px;
     line-height:40px;
-    background-color:#ddd;
+    background-color:#004000;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     border-top:1px solid #ccc;
@@ -4092,7 +4102,7 @@ input[type=text], input[type=number], input[type=password], textarea {
 .etc_box {
     overflow: hidden;
     position: relative;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 .tag_box {
     position: relative;
