@@ -4,11 +4,11 @@
   angular.module('app')
     .controller('productController', productController);
 
-  productController.$inject = ['$scope'];
-  function productController($scope) {
+  productController.$inject = ['$scope', 'storage'];
+  function productController($scope, storage) {
     var vm = this;
     vm.product = {};
-    
+
     activate();
 
     // ----------
