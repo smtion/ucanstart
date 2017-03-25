@@ -63,6 +63,8 @@
         function (res) {
           if (res.Header.Rpcd == '00000') {
             vm.isCanceled = true;
+            vm.product.current = parseInt(vm.product.current) - parseInt(vm.amount);
+            storage.set('product', vm.product);
             alert("결제취소가 완료되었습니다.\n메인화면으로 이동합니다.");
             $state('main');
           }

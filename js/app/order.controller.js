@@ -4,8 +4,8 @@
   angular.module('app')
     .controller('orderController', orderController);
 
-  orderController.$inject = ['$scope', 'storage', 'nhApi', '$stateParams'];
-  function orderController($scope, storage, nhApi, $stateParams) {
+  orderController.$inject = ['$scope', 'storage', 'nhApi', '$state', '$stateParams'];
+  function orderController($scope, storage, nhApi, $state, $stateParams) {
     var vm = this;
     vm.amount = $stateParams.a;
     vm.balance = 0;
@@ -68,8 +68,7 @@
         function (res) {
           if (res.Header.Rpcd == '00000') {
             vm.product.current = parseInt(vm.product.current) + parseInt(vm.amount);
-            storage.set('product', vm.product);
-            vm.product = storage.get('product');
+            storage.set('product', vm.product);;
             alert("결제가 완료되었습니다.");
             $state.go('order_done', $stateParams);
           }
