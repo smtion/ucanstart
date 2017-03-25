@@ -4115,13 +4115,19 @@ input[type=text], input[type=number], input[type=password], textarea {
 .card_Recommend{
     width:1200px;
     margin: 0 auto;
-    padding-top:30px;
+    padding-top:10px;
     padding-bottom:50px;
 }
 .card_Recommend img{
     border-radius: 11px;
     box-shadow: 0px 0px 60px 5px rgba(150,190,250,0.5);
     margin-bottom:30px;
+}
+.card_Recommend .icon_down{
+    box-shadow: none;
+    padding-top:20px;
+    padding-bottom:0px; 
+    margin-bottom:0px;
 }
 .card_Recommend p{
     color:#323232;
