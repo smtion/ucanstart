@@ -1,39 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>리워드 선택페이지</title>
-<link rel="stylesheet" type="text/css" href="../css/olley_161202.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_subpages.css" />
-<link rel="stylesheet" type="text/css" href="../css/common.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_btns.css" />
+	<title>메인페이지</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/olley_161202.css">
+	<link rel="stylesheet" href="../css/olley_subpages.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/olley_btns.css">
+	<link rel="stylesheet" href="../css/popup.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
 
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
 
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="../js/app/app.module.js"></script>
+	<script src="../js/app/main.controller.js"></script>
+	<script src="../js/app/payment.controller.js"></script>
+	<script src="../js/app/reward.controller.js"></script>
 
-<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!--토글스크립트,중복시 제거-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi" />
-
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-
-
-
-<body>
+<body ng-controller="rewardController">
     <div class="header">
     <div class="w_header">
         <h1><img src="../images/logo.png"/ style="width:100px;margin-top:-6px;"></h1>
@@ -86,7 +84,7 @@
             </ul>
     </div><!--web header end-->
 </div>
-    
+
  <div class="invest_banner info ">
         <div class="contents_wrap">
             <div class="t-c">
@@ -125,7 +123,7 @@
                             </dd>
                             <dt class="line">예상 제공일</dt>
                             <dd>
-                                
+
                             </dd>
                         </dl>
                     </div><!--pannel1-->
@@ -154,7 +152,7 @@
                             </dd>
                             <dt class="line">예상 제공일</dt>
                             <dd>
-                                
+
                             </dd>
                         </dl>
                     </div><!--pannel2-->
@@ -183,12 +181,12 @@
                             </dd>
                             <dt class="line">예상 제공일</dt>
                             <dd>
-                                
+
                             </dd>
                         </dl>
                     </div><!--pannel3-->
                 </div>
-                
+
                 <script type="text/javascript">
                     $(document).ready(function(){
                         $('.tab_demo li').click(function(){
@@ -199,7 +197,7 @@
                             $('#'+id).show();
                         });
                     });
-                </script>              
+                </script>
         </div><!----qnalist_contents end---->
         </div><!--sub_contents_bg end-->
         <p class="sum">

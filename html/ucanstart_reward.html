@@ -1,43 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi" />
-<title>리워드 상세페이지</title>
-<link rel="stylesheet" type="text/css" href="../css/olley_161202.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_subpages.css" />
-<link rel="stylesheet" type="text/css" href="../css/common.css" />
-<link rel="stylesheet" type="text/css" href="../css/olley_btns.css" />
+	<title>메인페이지</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes, target-densitydpi=medium-dpi">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<!-- 합쳐지고 최소화된 최신 CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/olley_161202.css">
+	<link rel="stylesheet" href="../css/olley_subpages.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/olley_btns.css">
+	<link rel="stylesheet" href="../css/popup.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
 
-<!-- 부가적인 테마 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/angular.min.js"></script>
 
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="../js/app/app.module.js"></script>
+	<script src="../js/app/main.controller.js"></script>
+	<script src="../js/app/payment.controller.js"></script>
+	<script src="../js/app/reward.controller.js"></script>
 
-<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
+	<!--fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://use.fontawesome.com/0a81fb1234.js"></script>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<!--토글스크립트,중복시 제거-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!--rolling-->
-<link rel="stylesheet" href="../css/swiper.min.css">
-<script src="../js/swiper.min.js"></script>
-<link rel="stylesheet" href="../css/swiper.css">
-<script src="../js/swiper.js"></script>
-
-<!--메뉴슬라이딩 고정-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </head>
-<body onload="InitializeM();">
+<body ng-controller="rewardController">
 <div class="header">
     <div class="w_header">
         <h1><img src="../images/logo.png"/ style="width:100px;margin-top:-6px;"></h1>
@@ -95,7 +89,7 @@
             <div class="olley_funding_contents">
                 <p>
                     쿠폰계의 숨은 강자
-                </p>    
+                </p>
             	<h3>제목이 들어가는 자리</h3>
                 <div class="row funding_banner_area">
                     <div class="col-md-7">
@@ -159,7 +153,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>          
+                            </div>
 -->
                         </div><!--funding_banner_detail end-->
                     </div><!--col-md-5 end-->
@@ -168,7 +162,7 @@
         </div><!--olley_funding_contents_bg end-->
 
         <div class="point_banner_bg" style="">
-           
+
         </div>
 
         <div class="invest_report_bg">
@@ -177,7 +171,7 @@
                     <div class="invest_report_tap">
                         <ul>
                             <li class="report_tabs olley_report_on" tab-id="tab1">
-                            <a href="javascript:;">투자분석</a>      
+                            <a href="javascript:;">투자분석</a>
                             </li>
                             <li class="report_tabs" tab-id="tab2">
                             <a href="javascript:;">리워드</a>
@@ -191,7 +185,7 @@
             </div>
             <div class="invest_report_pages">
                 <div class="tab_content" id="tab1">
-                    
+
                     <div class="report_tab_content">
                         <div style="width:900px;float:left;">
                         <div class="row scroll">
@@ -408,8 +402,8 @@
                                         <div class="primium_review_detail">
                                          “맛보다는 서비스가 눈에 띄는 곳이다. <br/>
                                           맛은 여느 멕시칸  레스토랑과 비슷했으나,<br/>
-                                          제공받는 서비스는 여 타 레스토랑과 차별화 된 점이 인상깊었다.”<br/> 
-                                          <p><span class="txt_red">9.01</span>/10</p>                                       
+                                          제공받는 서비스는 여 타 레스토랑과 차별화 된 점이 인상깊었다.”<br/>
+                                          <p><span class="txt_red">9.01</span>/10</p>
                                         </div>
                                     </div>
                                 </div><!--primium_review-->
@@ -443,13 +437,13 @@
                                         <div class="primium_review_detail">
                                          “맛보다는 서비스가 눈에 띄는 곳이다. <br/>
                                           맛은 여느 멕시칸  레스토랑과 비슷했으나,<br/>
-                                          제공받는 서비스는 여 타 레스토랑과 차별화 된 점이 인상깊었다.”<br/> 
-                                          <p><span class="txt_red">9.01</span>/10</p>                                       
+                                          제공받는 서비스는 여 타 레스토랑과 차별화 된 점이 인상깊었다.”<br/>
+                                          <p><span class="txt_red">9.01</span>/10</p>
                                         </div>
                                     </div>
                                 </div><!--primium_review-->
                             </div>
-                        </div> 
+                        </div>
                     </div>
                         <div class="tab_sidebar" id="SCROLL">
                             <h2>리워드 LIST</h2>
@@ -516,9 +510,9 @@
                         $('#'+id).show();
                     });
                 });
-            </script>              
+            </script>
         </div><!--invest_report_pages end-->
-    </div><!--sub_full end-->   
+    </div><!--sub_full end-->
 </div><!--wrap-end-->
 <div class="footer_full">
     <div class="footer">
@@ -577,7 +571,7 @@ var swiper = new Swiper('.swiper-container', {
 	spaceBetween: 10
 });
 </script>
-    
+
  <script>
       $( document ).ready( function() {
         var jbOffset = $( '.tab_sidebar' ).offset();
@@ -631,7 +625,7 @@ var swiper = new Swiper('.swiper-container', {
     });
 }(window, window.jQuery));
 </script>
- 
+
 
 
 </body>
