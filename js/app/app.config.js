@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('app')
-    .config(httpConfig);
+    .config(httpConfig)
+    .config(routeConfig);
 
   httpConfig.$inject = ['$httpProvider'];
   function httpConfig($httpProvider) {
@@ -17,5 +18,20 @@
     // $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
     //
     // $httpProvider.interceptors.push('httpInterceptor');
+  }
+
+  routeConfig.$inject = ['$routeProvider', '$locationProvider'];
+  function routeConfig($routeProvider, $locationProvider) {
+    // $locationProvider.html5Mode(true);
+    history.pushState ? $locationProvider.html5Mode(true) : $locationProvider.html5Mode(false);
+    //
+    // location.href = '/#/' + location.href.split('/').pop();
+
+    $routeProvider
+      //.when('/', {templateUrl: 'html/test.html', controller: 'mainController', controllerAs: 'vm'})
+      //.when('/userList', {templateUrl: 'views/userList.html', controller: 'userListCtrl'})
+      .when('/', {templateUrl: 'html/main.html', controller: 'mainController', controllerAs: 'vm'})
+      .when('/product', {templateUrl: 'html/product.html', controller: 'productController', controllerAs: 'vm'})
+      .otherwise({redirectTo: '/'});
   }
 })();

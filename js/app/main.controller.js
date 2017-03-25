@@ -6,7 +6,7 @@
 
   mainController.$inject = ['$scope', 'storage', 'nhApi'];
   function mainController($scope, storage, nhApi) {
-    var vm = $scope.vm = {};
+    var vm = this;
     vm.product = {};
 
     vm.get = get;
@@ -20,7 +20,6 @@
     }
 
     function init() {
-      // console.log('Initialized');
       vm.product = storage.get('product');
       if (vm.product === null) {
         vm.product = {
@@ -29,7 +28,6 @@
         };
         storage.set('product', vm.product);
       }
-      console.log(vm.product);
     }
 
     function reload() {
